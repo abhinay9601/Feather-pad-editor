@@ -1,0 +1,52 @@
+.outerdivwebeditor{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: start;
+    /* width: 100vw; */
+    /* overflow-x: hidden; */
+    margin: 6rem 0;
+}
+
+.innerdivfirstwebeditor{
+    padding: 0rem 2rem;
+    width: 40vw;
+    margin: 0 0 0 20px;
+    text-align: left;
+}
+.innerdivfirstwebeditor h2{
+    font-size: 1.6rem;
+}
+.innerdivfirstwebeditor p{
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #1A4663;
+    font-weight: 500;
+}
+
+.innerdivsecondwebeditor{
+    display: inline;
+    width: 45vw;
+    height:fit-content;
+    overflow: hidden;
+    /* border: 2px solid black; */
+border-radius: 20px;
+}
+
+.innerdivsecondwebeditor p{
+display: inline;
+
+}
+ .img{
+width: 100%;
+display: inline;
+
+}
+.mainwebbutton{
+    width: fit-content;
+    height: 8vh;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #47cf73;
+    margin: 30px 0 0 0;
+}

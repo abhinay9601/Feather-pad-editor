@@ -1,0 +1,7 @@
+.mainOutside {
+  /* background: linear-gradient(120deg, #2980b9, #8e44ad); */
+  background: linear-gradient(180deg, #000000, #13131a,#002944,#32183d);
+
+  width: 100vw;
+  /* height: 100vh; */
+}

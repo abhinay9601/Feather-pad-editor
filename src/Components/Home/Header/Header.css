@@ -1,0 +1,76 @@
+.headerOutside {
+  width: 100vw;
+  height: 10vh;
+  background-color: #fff;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: inherit;
+  /* overflow: hidden; */
+  max-width: 100vw;
+  position:fixed;
+  top: 0;
+  z-index: 3;
+}
+@media screen and (min-width: 700px) {
+  .headerbutton {
+    width: 15vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .headerbuttons {
+    font-size: 10px !important;
+  }
+  .headerContent {
+    font-size: 1.2rem !important;
+  }
+  .headerlogo {
+    font-size: 2rem !important;
+  }
+}
+
+.headerlogo {
+  /* padding-left:50px; */
+  font-size: 3rem;
+  color: #8e44ad;
+  display: flex;
+  /* width: fit-content; */
+}
+.headerContent {
+  color: #8e44ad;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.headerbutton {
+  /* padding: 0 50px; */
+  display: flex;
+  /* width: 12vw; */
+  display: flex;
+  justify-content: space-between;
+  opacity: 1 !important;
+}
+.headerbuttons {
+  width: fit-content;
+  height: 5vh;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #09d54a;
+  margin: 0;
+  opacity: 1 !important;
+}
+.buttoncontainer {
+  opacity: 1 !important;
+}
+.headerbuttons:hover{
+  background-color: #75f79e;
+
+}

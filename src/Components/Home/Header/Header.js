@@ -13,7 +13,7 @@ const Header = () => {
           <span className="feather">
             <GiFeather />
           </span>
-          Feater Pad Editor
+          Feather Pad Editor
         </div>
       </div>
       <div className="headerbutton">

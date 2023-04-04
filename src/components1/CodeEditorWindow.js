@@ -6,6 +6,7 @@ const CodeEditorWindow = ({ onChange, language, code, theme }) => {
   const [value, setValue] = useState(code || "");
 
   const handleEditorChange = (value) => {
+    // console.log("code "+value);
     setValue(value);
     onChange("code", value);
   };

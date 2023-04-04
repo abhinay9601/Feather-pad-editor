@@ -3,7 +3,7 @@ import CodeEditorWindow from "./CodeEditorWindow";
 import axios from "axios";
 import { classnames } from "../utils/general";
 import { languageOptions } from "../constants/languageOptions";
-
+import { saveAs } from "file-saver";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -48,6 +48,7 @@ const Landing = () => {
     switch (action) {
       case "code": {
         setCode(data);
+        console.log("data from" + data);
         break;
       }
       default: {
@@ -175,6 +176,13 @@ const Landing = () => {
     });
   };
 
+  const saveHandler = () => {
+    const fileToSave = new Blob([code], {
+      type: "text/plain;charset=utf-8",
+    });
+    saveAs(fileToSave, "example.txt");
+  };
+
   return (
     <>
       <ToastContainer
@@ -196,9 +204,7 @@ const Landing = () => {
             <BiArrowBack></BiArrowBack>
           </Link>
         </div>
-        <div className="w-1/2 text-left">
-          Code Editor Window
-        </div>
+        <div className="w-1/2 text-left">Code Editor Window</div>
       </div>
       <div className="flex flex-row">
         <div className="px-4 py-2">
@@ -206,6 +212,14 @@ const Landing = () => {
         </div>
         <div className="px-4 py-2">
           <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
+        </div>
+        <div className="px-4 py-2">
+          <div
+            onClick={saveHandler}
+            className="font-bold border-2 rounded py-4 px-8 border-black bg-green-600"
+          >
+            SAVE
+          </div>
         </div>
       </div>
       <div className="flex flex-row space-x-4 items-start px-4 py-4">

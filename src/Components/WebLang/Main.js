@@ -47,7 +47,7 @@ const MainWeb = () => {
       type: "text/plain;charset=utf-8",
     });
     saveAs(fileToSave, "example.js");
-  };
+  }; 
 
   // compile();
   return (
@@ -60,7 +60,8 @@ const MainWeb = () => {
                 <BiArrowBack></BiArrowBack>
               </Link>
             </span>{" "}
-          </div>
+          </div> 
+          
           <div className="webname flex">
             <GiSpiderWeb></GiSpiderWeb> WEB EDITOR
           </div>

@@ -21,6 +21,21 @@ const MainSignin = () => {
     localStorage.setItem("Passowrd",password)
     localStorage.setItem("Phone",phone)
 
+    fetch('http://localhost:3000/api/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email,
+        password:password,
+        phone:phone
+      })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+
   };
 
   return (

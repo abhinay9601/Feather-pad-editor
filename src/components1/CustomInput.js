@@ -11,7 +11,7 @@ const CustomInput = ({ customInput, setCustomInput }) => {
         onChange={(e) => setCustomInput(e.target.value)}
         placeholder={`Custom input`}
         style={{"minHeight":"20vh"}}
-        className="focus:outline-none text-black w-full border-2 border-black drop-shadow-md z-10 rounded-md px-4 py-2 hover:shadow transition duration-200 bg-white mt-2"
+        className="focus:outline-none text-black w-full border-2 border-black drop-shadow-md z-10 rounded-md px-4 py-2 mx-0 hover:shadow transition duration-200 bg-white mt-2"
       ></textarea>
     </>
   );

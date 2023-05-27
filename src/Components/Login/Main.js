@@ -4,6 +4,7 @@ import Monkey_pwd from "../../Images/login/monkey_pwd.gif";
 import monkey from "../../Images/login/monkey.gif";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const MainLogin = () => {
   const [userName, setUserName] = useState("");
@@ -11,6 +12,8 @@ const MainLogin = () => {
   const [pass, setPass] = useState(true);
   const [eyeopen, setEyeOpen] = useState(true);
   const [ispass, setIsPass] = useState();
+  const[userValid,setUserValid] = useState(true);
+  const navigate = useNavigate();
 
   const userNameHandler = (e) => {
     setUserName(e.target.value);
@@ -41,9 +44,36 @@ const MainLogin = () => {
     else setEyeOpen(true);
   }, [pass]);
 
-  const submitHandler = () => {
-    localStorage.setItem("Email",userName);
-    localStorage.setItem("Passowrd",password)
+  const submitHandler = (event) => {
+    event.preventDefault();
+    localStorage.setItem("Email", userName);
+    localStorage.setItem("Passowrd", password);
+
+    fetch("http://localhost:3000/form/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: userName,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("message is ", data.message);
+        if (data.message == "Logged in successfully") {
+          navigate("/");
+        } else {
+          setUserName("");
+          setPassword("");
+          console.log("working");
+          setUserValid(false);
+        }
+      })
+      .catch((error) => {
+        console.error("ERROR IS ", error);
+      });
   };
 
   return (
@@ -67,11 +97,13 @@ const MainLogin = () => {
             />
           </div>
           <div className="formcon">
+            {!userValid && <p className="m-1 text-red-600">Invalid email or password</p>}
             <form>
               <input
                 type="email"
                 id="mail"
                 name="username"
+                value={userName}
                 onClick={emailclick}
                 onChange={userNameHandler}
                 className="tb"
@@ -83,6 +115,7 @@ const MainLogin = () => {
               <input
                 type="password"
                 id="pwdbar"
+                value={password}
                 onClick={passclick}
                 onChange={passwordHandler}
                 name="pwd"
@@ -99,16 +132,15 @@ const MainLogin = () => {
                 <span className="show">Show Password</span>
               </div>
               <br />
-              <Link to="/">
-                {" "}
-                <input
-                  type="submit"
-                  name=""
-                  onClick={submitHandler}
-                  className="sbutton"
-                  value="L O G I N"
-                />
-              </Link>
+              {/* <Link to="/"> */}{" "}
+              <input
+                type="submit"
+                name=""
+                onClick={submitHandler}
+                className="sbutton"
+                value="L O G I N"
+              />
+              {/* </Link> */}
               <div className="regi">
                 <Link to="/signin">
                   {" "}

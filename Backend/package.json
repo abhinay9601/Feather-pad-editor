@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Abhinay Singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.3.0",
+    "sequelize": "^6.31.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

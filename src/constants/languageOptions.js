@@ -11,12 +11,12 @@ export const languageOptions = [
   //   label: "Assembly (NASM 2.14.02)",
   //   value: "assembly",
   // },
-  // {
-  //   id: 46,
-  //   name: "Bash (5.0.0)",
-  //   label: "Bash (5.0.0)",
-  //   value: "bash",
-  // },
+  {
+    id: 46,
+    name: "Bash (5.0.0)",
+    label: "Bash (5.0.0)",
+    value: "bash",
+  },
   // {
   //   id: 47,
   //   name: "Basic (FBC 1.07.1)",
@@ -83,12 +83,12 @@ export const languageOptions = [
     label: "C# (Mono 6.6.0.161)",
     value: "csharp",
   },
-  // {
-  //   id: 77,
-  //   name: "COBOL (GnuCOBOL 2.2)",
-  //   label: "COBOL (GnuCOBOL 2.2)",
-  //   value: "cobol",
-  // },
+  {
+    id: 77,
+    name: "COBOL (GnuCOBOL 2.2)",
+    label: "COBOL (GnuCOBOL 2.2)",
+    value: "cobol",
+  },
   // {
   //   id: 55,
   //   name: "Common Lisp (SBCL 2.0.0)",
@@ -156,12 +156,12 @@ export const languageOptions = [
   //   value: "java",
   // },
 
-  // {
-  //   id: 78,
-  //   name: "Kotlin (1.3.70)",
-  //   label: "Kotlin (1.3.70)",
-  //   value: "kotlin",
-  // },
+  {
+    id: 78,
+    name: "Kotlin (1.3.70)",
+    label: "Kotlin (1.3.70)",
+    value: "kotlin",
+  },
   {
     id: 64,
     name: "Lua (5.3.5)",
@@ -253,12 +253,12 @@ export const languageOptions = [
     label: "Scala (2.13.2)",
     value: "scala",
   },
-  // {
-  //   id: 82,
-  //   name: "SQL (SQLite 3.27.2)",
-  //   label: "SQL (SQLite 3.27.2)",
-  //   value: "sql",
-  // },
+  {
+    id: 82,
+    name: "SQL (SQLite 3.27.2)",
+    label: "SQL (SQLite 3.27.2)",
+    value: "sql",
+  },
   {
     id: 83,
     name: "Swift (5.2.3)",
@@ -271,10 +271,10 @@ export const languageOptions = [
     label: "TypeScript (3.7.4)",
     value: "typescript",
   },
-  // {
-  //   id: 84,
-  //   name: "Visual Basic.Net (vbnc 0.0.0.5943)",
-  //   label: "Visual Basic.Net (vbnc 0.0.0.5943)",
-  //   value: "vbnet",
-  // },
+  {
+    id: 84,
+    name: "Visual Basic.Net (vbnc 0.0.0.5943)",
+    label: "Visual Basic.Net (vbnc 0.0.0.5943)",
+    value: "vbnet",
+  },
 ];
